@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-    /* background-color: #F9EFDC; */
+    background-color: #F9EFDC;
     padding-top: 80px;
 }
 
@@ -249,7 +249,9 @@ nav {
 
 #countdown a:hover {
     background-color: #FFA67E;
+    transform: scale(1.15);
 }
+
 
 /* --------------------------- the_festival_main/aboutUs --------------------------- */
 
@@ -284,7 +286,7 @@ nav {
 /* --------------------------- the_festival_main/pastEvents --------------------------- */
 
 .pastEvents {
-    padding-bottom: 60px;
+    padding-bottom: 120px;
 }
 
 .pastEvents h1 {
@@ -423,6 +425,7 @@ footer {
 
 .news {
     padding: 60px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .news h1 {
@@ -470,6 +473,7 @@ footer {
 
 .program {
     margin-bottom: 60px;
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 
@@ -520,7 +524,8 @@ td {
 /* --------------------------- Program_main/transportation --------------------------- */
 
 .transport {
-    padding: 60px;
+    padding-top: 60px;
+    padding-bottom: 120px;
 }
 
 .transport h1 {
@@ -578,9 +583,10 @@ td {
 }
 
 .artist-logo {
+    width: 280px;
     position: absolute;
-    top: 55px;
-    left: 936px;
+    top: 0px;
+    left: 850px;
 }
 
 /* --------------------------- artist_main/artist-cards --------------------------- */
@@ -591,6 +597,8 @@ td {
     justify-content: flex-start;
     width: 1104px;
     margin: 0 auto;
+
+     padding-bottom: 120px;
 }
 
 .artists {
@@ -711,29 +719,31 @@ td {
     border-radius: 16px;
     padding: 36px 60px;
     box-sizing: border-box;
-    margin: 0 16px;
+    margin: 0 24px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
-    background-color: #0077B6;
+    background-image: linear-gradient(225deg, #0077B6 20%, #FFC857 50%, #55C6A9 80%);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
 .ticket h3,
 #ticket-price {
-    font-size: 18px;
+    font-size: 20px;
+    font-weight: 450;
     text-align: center;
     margin: 16px 0;
     color: #fff;
 }
-
 
 #day1-square,
 #day2-square,
 #day3-square {
     width: 100%;
     border-radius: 9999px;
+    border: 3px solid #757575;
 
     font-size: 24px;
     font-weight: 500;
@@ -761,19 +771,19 @@ td {
 #day1-square,
 #day1-btn {
     background-color: #FFC857;
-    border: none;
+    border: 3px solid #F9EFDC;
 }
 
 #day2-square,
 #day2-btn {
     background-color: #55C6A9;
-    border: none;
+    border: 3px solid #F9EFDC;
 }
 
 #day3-square,
 #day3-btn {
     background-color: #FFA67E;
-    border: none;
+    border: 3px solid #F9EFDC;
 }
 
 #day1-btn:hover,
@@ -785,8 +795,80 @@ td {
     transform: scale(1.1);
 }
 
+.ticket:hover {
+    transform: scale(1.05);
+}
+
+
 /* --------------------------- tickets_main/floating-logo --------------------------- */
 
+.logo-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    margin-top: 150px;
+}
+
+.floating-logo {
+    display: flex;
+    width: calc(185px * 6);
+    /* 圖片寬度 * 圖片數量 */
+    animation: floating-logo 10s linear infinite;
+}
+
+@keyframes floating-logo {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.floating-logo img {
+    width: 185px;
+    height: 100px;
+}
+
+/* 滑鼠懸停時暫停動畫 */
+.logo-carousel:hover .floating-logo {
+    animation-play-state: paused;
+}
+
+.icon-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.floating-icon {
+    display: flex;
+    width: calc(120px * 5);
+    /* 圖片寬度 * 圖片數量 */
+    animation: floating-icon 10s linear infinite;
+}
+
+@keyframes floating-icon {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.floating-icon img {
+    width: 120px;
+    height: 120px;
+}
+
+/* 滑鼠懸停時暫停動畫 */
+.icon-carousel:hover .floating-icon {
+    animation-play-state: paused;
+}
 
 
 /* --------------------------- tickets_main/infos --------------------------- */
@@ -795,45 +877,44 @@ td {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
+    margin: 40px 0 120px;
 }
 
-.ticket-infos-text {
+.ticket-text {
     width: 500px;
     padding: 30px;
 }
 
-.ticket-infos-text h1 {
+.ticket-text h1 {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 8px;
 }
 
-.ticket-infos-text p {
+.ticket-text p {
     font-size: 16px;
     line-height: 20px;
-    padding-right: 36px
+    padding: 0 36px 0 16px;
+    margin: 16px 0;
+
+    border-left: 3px dotted #000000;
 }
 
-.ticket-infos-text h3 {
-    font-size: 28px;
+.ticket-text h3 {
+    font-size: 24px;
     margin: 8px 0;
+    font-weight: 450;
 }
 
-.ticket-infos-text span{
+.ticket-text span {
     font-weight: bold;
     text-decoration: underline;
 }
 
-.ticket-infos-text i{
-
+.ticket-infos img {
+    width: 435px;
+    border-radius: 9999px;
 }
-
-.ticket-info-img img {
-    width: 500px;
-    border-radius: 16px;
-}
-
 
 /* --------------------------- FAQ/header --------------------------- */
 
