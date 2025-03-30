@@ -3,7 +3,7 @@
 
 body {
     font-family: 'Roboto', 'Arial Narrow', Arial, sans-serif;
-    /* background-color: #F9EFDC; */
+    background-color: #F9EFDC;
     padding-top: 80px;
 }
 
@@ -11,6 +11,11 @@ body {
     width: 1200px;
     margin: 0 auto;
     background-color: #F9EFDC;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
 }
 
 @keyframes fadeIn {
@@ -155,7 +160,7 @@ nav {
 /* --------------------------- the_festival_main/lineup --------------------------- */
 
 .lineUp {
-    padding: 60px 72px;
+    padding: 120px 72px;
 }
 
 .lineUp-bar {
@@ -206,7 +211,7 @@ nav {
 /* --------------------------- the_festival_main/countdown --------------------------- */
 
 #countdown {
-    padding: 32px 72px;
+    padding: 40px;
     height: 100px;
     border-top: 1.5px solid #ababab;
     border-bottom: 1.5px solid #ababab;
@@ -256,9 +261,10 @@ nav {
 /* --------------------------- the_festival_main/aboutUs --------------------------- */
 
 .aboutUs {
-    padding: 60px 0;
+    margin: 180px 0;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .aboutUs-text {
@@ -286,29 +292,41 @@ nav {
 /* --------------------------- the_festival_main/pastEvents --------------------------- */
 
 .pastEvents {
-    padding-bottom: 120px;
+    margin: 180px 0;
+    /* padding: 40px 0 180px; */
 }
 
 .pastEvents h1 {
     font-size: 40px;
     font-weight: bold;
-    margin-bottom: 28px;
+    margin-bottom: 60px;
 }
 
-.pastEvents-gallery {
+.event {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 16px;
 }
 
-.pastEvents-gallery img {
-    width: 400px;
+.event h3 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.event img {
     display: block;
+    width: 65%;
+    border-radius: 60px;
     -webkit-filter: sepia(70%);
 }
 
-.pastEvents-gallery img:hover {
+.event img:hover {
     -webkit-filter: sepia(0%);
 }
+
+
 
 /* --------------------------- footer/sponsors --------------------------- */
 
@@ -353,6 +371,10 @@ footer {
     }
 }
 
+.sponsors:hover .sponsors-logo {
+    animation-play-state: paused;
+}
+
 .sponsors img {
     width: 80px;
 }
@@ -363,7 +385,8 @@ footer {
     width: 1200px;
     margin-top: 48px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    gap: 200px;
     align-items: center;
 }
 
@@ -377,6 +400,12 @@ footer {
 .footer-icons i:hover {
     color: #FFC857;
 }
+
+.footer-copyright p{
+    text-indent: 8px;
+    line-height: 20px;
+}
+
 
 .footer-subscription input {
     width: 250px;
@@ -437,7 +466,7 @@ footer {
 .news-cards {
     display: flex;
     justify-content: space-between;
-    gap: 16px;
+    gap: 24px;
 }
 
 .news h2 {
@@ -454,7 +483,7 @@ footer {
 .news-card2,
 .news-card3 {
     width: 350px;
-    height: 150px;
+    aspect-ratio: 1/0.6;
     border: 1.5px solid #757575;
     border-radius: 8px;
     padding: 24px;
@@ -469,6 +498,26 @@ footer {
     background-color: #FFC857;
 }
 
+.news-down {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+
+    text-align: right;
+}
+
+.news-cards a {
+    text-decoration: none;
+    color: #0077B6;
+    font-weight: bold;
+}
+
+.news-cards a:hover {
+    text-decoration: underline;
+}
+
+
 /* --------------------------- Program_main/program --------------------------- */
 
 .program {
@@ -481,12 +530,12 @@ footer {
     font-size: 40px;
     font-weight: bold;
     text-align: center;
-    margin-bottom: 60px;
+    padding-top: 60px;
 }
 
 table {
     margin: 0 auto;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     text-align: center;
     border: 3px solid #000000;
@@ -514,7 +563,7 @@ td {
 #table-time,
 #table-day1,
 #table-day2 {
-    width: 300px;
+    width: 280px;
     border: 3px solid #000000;
     padding: 16px;
     background-color: #FFA67E;
@@ -532,6 +581,7 @@ td {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 32px;
+    padding-left: 24px;
 }
 
 .transport-bar {
@@ -539,9 +589,9 @@ td {
     justify-content: space-around;
 }
 
-.transport-text {
+.transport-text p {
     padding: 0 24px;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 300;
     line-height: 28px;
 }
@@ -712,6 +762,7 @@ td {
 /* --------------------------- tickets_main/cards --------------------------- */
 
 .ticket-cards {
+    margin: 60px;
     display: flex;
     justify-content: center;
 }
@@ -792,7 +843,7 @@ td {
 
 .ticket:hover {
     /* transform: scale(1.05); */
-    transform: rotate(3deg);
+    /* transform: rotate(3deg); */
 }
 
 #day1-btn:hover,
@@ -836,6 +887,10 @@ td {
     height: 100px;
 }
 
+.floating-logo img:hover {
+    transform: rotate(-15deg);
+}
+
 /* 滑鼠懸停時暫停動畫 */
 .logo-carousel:hover .floating-logo {
     animation-play-state: paused;
@@ -867,6 +922,10 @@ td {
 .floating-icon img {
     width: 80px;
     height: 80px;
+}
+
+.floating-icon img:hover {
+    transform: rotate(180deg);
 }
 
 /* 滑鼠懸停時暫停動畫 */
@@ -922,16 +981,14 @@ td {
 
 /* --------------------------- shop/header --------------------------- */
 
-.shop-banner {
-    margin-bottom: 100px;
-}
-
 .shop-title h1 {
+    width: 80%;
     font-size: 48px;
     font-weight: bold;
     text-align: center;
     border-bottom: 3px solid #000000;
     padding-bottom: 24px;
+    margin: 100px auto 0;
 }
 
 .shop-title h1:hover {
@@ -948,14 +1005,14 @@ td {
     gap: 16px;
 
     width: 1148px;
-    margin: 48px auto 180px;
+    margin: 48px auto 200px;
 }
 
 .shop-items {
     width: 240px;
     padding: 16px;
 
-    border: 1.5px solid #000000;
+    border: 1.5px solid #ababab;
     border-radius: 8px;
 
     display: flex;
@@ -1111,7 +1168,7 @@ td {
 .plus-items {
     padding: 16px;
 
-    border: 1.5px solid #000000;
+    border: 1.5px solid #ababab;
     border-radius: 8px;
 
     display: flex;
@@ -1157,27 +1214,30 @@ p {
     text-align: center;
     text-decoration: none;
     color: #000000;
+    background-color: #55C6A9;
     border: 1.5px solid #000000;
     width: 30%;
     margin: 0 auto 180px;
-    font-size: 24px;
-    padding: 4px;
+    font-size: 16px;
+    padding: 8px;
     border-radius: 8px;
 }
 
 .product-checkout a:hover {
-    background-color: #55C6A9;
+    opacity: 0.8;
 }
 
-/* --------------------------- shopping_cart --------------------------- */
+/* --------------------------- check_out/list --------------------------- */
 
-main {
+.content {
     padding: 60px 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .checkout-list {
     width: 40%;
-    margin: 0 24px;
     padding: 16px 0;
 
     border: 1px solid #000000;
@@ -1274,6 +1334,262 @@ main {
     font-size: 24px;
     font-weight: bold;
 }
+
+/* --------------------------- check_out/payment --------------------------- */
+.checkout-payment {
+    text-align: center;
+    width: 50%;
+    padding: 24px;
+    border: 1px solid #000000;
+    border-radius: 16px;
+    position: relative;
+    ;
+}
+
+.express button {
+    width: 40%;
+    aspect-ratio: 6/1;
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    background-color: #F9EFDC;
+    cursor: pointer;
+    margin: 8px 0 16px;
+}
+
+.express img {
+    display: block;
+    margin: 0 auto;
+    width: 40%;
+}
+
+.express button:hover {
+    background-color: #fff;
+}
+
+#or::before {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: #757575;
+    position: absolute;
+    top: 112px;
+    left: 35px;
+}
+
+#or::after {
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: #757575;
+    position: absolute;
+    top: 112px;
+    right: 35px;
+}
+
+.client-form {
+    text-align: left;
+    margin-bottom: 60px;
+    padding: 0 16px;
+}
+
+.client-form p {
+    margin: 8px 0;
+}
+
+.contact-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+
+}
+
+.contact-bar a {
+    color: #0077B6;
+}
+
+.contact-bar a:hover {
+    color: #757575;
+}
+
+.client-form select {
+    width: 100%;
+    aspect-ratio: 10/1;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #757575;
+
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    background-color: #F9EFDC;
+    margin-bottom: 4px;
+    text-indent: 8px;
+}
+
+
+.name-bar,
+.address-bar,
+.credit-radio,
+.credit-img,
+.card-code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.credit-select {
+    display: flex;
+    justify-content: space-between;
+    height: 50px;
+    margin-bottom: 4px;
+}
+
+.credit-img img {
+    width: 38px;
+}
+
+.client-form input {
+    width: 100%;
+    height: 60px;
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    background-color: #F9EFDC;
+
+    font-family: 'Roboto';
+    font-size: 16px;
+    text-indent: 8px;
+    box-sizing: border-box;
+
+    margin: 4px 0;
+}
+
+.client-form button {
+    width: 100%;
+    aspect-ratio: 10/1;
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    color: #F9EFDC;
+    background-color: #0077B6;
+    font-size: 16px;
+    ;
+}
+
+.client-form button:hover {
+    cursor: pointer;
+    background-color: #FFA67E;
+    color: #000000
+}
+
+
+.client-title {
+    font-size: 24px;
+    padding: 8px 0;
+}
+
+#emailme,
+#ccard,
+#shipping,
+#save {
+    width: 16px;
+    height: 16px;
+}
+
+.sign-txt {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.credit-section {
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #FFC857;
+    opacity: 0.7;
+}
+
+.remember-section {
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #FFC857;
+    opacity: 0.7;
+}
+
+#remember {
+    margin-top: 16px;
+}
+
+#paynow {
+    margin-top: 16px;
+}
+
+
+/* --------------------------- log_in --------------------------- */
+
+.log-in-bar {
+    margin: 120px 0 280px;
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+
+.log-in-bar h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 16px 0;
+}
+
+.log-in-bar input {
+    width: 360px;
+    aspect-ratio: 10/1;
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    background-color: #F9EFDC;
+    margin-bottom: 8px;
+    text-indent: 8px;
+    font-size: 16px;
+    font-family: 'Roboto';
+}
+
+.log-in-bar button {
+    width: 100%;
+    aspect-ratio: 10/1;
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    background-color: #FFC857;
+    margin-bottom: 8px;
+
+    font-family: 'Roboto';
+    font-size: 16px;
+}
+
+.log-in-bar button:hover {
+    background-color: #FFA67E;
+    cursor: pointer;
+}
+
+.log-in-bar a {
+    color: #757575;
+    font-size: 14px;
+    font-weight: 450;
+}
+
+.log-in-bar a:hover {
+    color: #0077B6
+}
+
+.log-in-form,
+.create-account-form {
+    border: 1.5px solid #757575;
+    border-radius: 8px;
+    padding: 8px 24px 100px;
+}
+
+
+
 
 
 /* --------------------------- FAQ/header --------------------------- */
@@ -1517,12 +1833,15 @@ main {
     height: 320px;
     background-color: #FFA67E;
     border-radius: 8px;
-    font-size: 20px;
     padding: 36px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.contact-us-info p {
+    font-size: 20px;
 }
 
 .contact-us-info:hover {
