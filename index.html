@@ -9,13 +9,14 @@
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="js/invibe.js"></script>
     <title>InVibe Festival</title>
 </head>
 
 <body>
+
     <div class="wrapper">
         <header>
             <nav>
@@ -35,51 +36,55 @@
                     </div>
                 </div>
             </nav>
-            <div class="banner">
-                <img id="banner-img" src="img/Festival/banner500.svg" alt="banner">
-                <img id="banner-text" src="img/Festival/bannerText500.svg" alt="bannerText">
+            <div class="section">
+                <div class="banner">
+                    <img id="banner-img" src="img/Festival/banner500.png" alt="banner">
+                    <img id="banner-text" src="img/Festival/bannerText500.svg" alt="bannerText">
+                </div>
             </div>
         </header>
         <main>
-            <div class="lineUp">
-                <div class="lineUp-bar">
-                    <h1 class="lineUp-h1">Lineup</h1>
-                    <a href="artists.html">Find out more <i class="fa-solid fa-arrow-right"></i></a>
+            <div class="section">
+                <div class="lineUp">
+                    <div class="lineUp-bar">
+                        <h1 class="lineUp-h1">Lineup</h1>
+                        <a href="artists.html">Find out more <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <p class="lineUp-names">
+                        <a href="">Allure</a>
+                        <a href="">Bo Sinlar</a>
+                        <a href="">Pokobo</a>
+                        <a href="">Boster Ban</a>
+                        <a href="">Contibot</a>
+                        <a href="">Kassias</a>
+                        <a href="">Sexaire</a>
+                        <a href="">Shannel Ores</a>
+                        <a href="">Dev Parc</a>
+                        <a href="">Darioz</a>
+                        <a href="">Dexcloture</a>
+                        <a href="">dj peelgoi</a>
+                        <a href="">TQC</a>
+                        <a href="">Velamour</a>
+                        <a href="">Swedi 62</a>
+                        <a href="">Fred Encore</a>
+                        <a href="">Sean Tonic</a>
+                        <a href="">Zustise</a>
+                        <a href="">Cardell</a>
+                        <a href="">Cavinzcy</a>
+                        <a href="">Coda Le Vend</a>
+                        <a href="">Pateon</a>
+                        <a href="">Notjo</a>
+                        <a href="">Nyt</a>
+                        <a href="">MaRa Two</a>
+                        <a href="">Marcale</a>
+                        <a href="">Grand Cookie</a>
+                        <a href="">Violet Disko Pathine</a>
+                        <a href="">XebestiEn</a>
+                        <a href="">Dom Nich</a>
+                    </p>
                 </div>
-                <p class="lineUp-names">
-                    <a href="">Allure</a>
-                    <a href="">Bo Sinlar</a>
-                    <a href="">Pokobo</a>
-                    <a href="">Boster Ban</a>
-                    <a href="">Contibot</a>
-                    <a href="">Kassias</a>
-                    <a href="">Sexaire</a>
-                    <a href="">Shannel Ores</a>
-                    <a href="">Dev Parc</a>
-                    <a href="">Darioz</a>
-                    <a href="">Dexcloture</a>
-                    <a href="">dj peelgoi</a>
-                    <a href="">TQC</a>
-                    <a href="">Velamour</a>
-                    <a href="">Swedi 62</a>
-                    <a href="">Fred Encore</a>
-                    <a href="">Sean Tonic</a>
-                    <a href="">Zustise</a>
-                    <a href="">Cardell</a>
-                    <a href="">Cavinzcy</a>
-                    <a href="">Coda Le Vend</a>
-                    <a href="">Pateon</a>
-                    <a href="">Notjo</a>
-                    <a href="">Nyt</a>
-                    <a href="">MaRa Two</a>
-                    <a href="">Marcale</a>
-                    <a href="">Grand Cookie</a>
-                    <a href="">Violet Disko Pathine</a>
-                    <a href="">XebestiEn</a>
-                    <a href="">Dom Nich</a>
-                </p>
             </div>
-            <div id="countdown">
+            <div class="section" id="countdown">
                 <h2>Countdown</h2>
                 <div id="timer">
                     <span id="days" class="timer-number"></span><span class="timer-label">Days</span>
@@ -89,64 +94,84 @@
                 </div>
                 <a href="tickets.html">Secure your ticket now</a>
             </div>
-            <div class="aboutUs">
-                <div><img src="img/Festival/aboutUsPhoto.png" alt="about-us" class="about-us-img"></div>
-                <div class="aboutUs-text">
-                    <h1>About InVibe</h1>
-                    <h2>"Sunset, Soundwaves & Pure Vibes."</h2>
-                    <p class="about-us-p">InVibe Festival is more than just a music event—it’s a celebration of rhythm,
-                        nature, and connection. Set against the
-                        stunning backdrop of a lakeside escape, it blends electronic beats with the soul of summer,
-                        creating
-                        an immersive
-                        experience where music flows as freely as the waves. From Nu Jazz and Indie Soul to House, Funk,
-                        Nu
-                        Disco, and Light
-                        Techno, InVibe takes you on a journey from sunset grooves to midnight euphoria.
-                        <br>
-                        <br>
-                        Our mission is to bring people together through the universal language of music, creating a
-                        space
-                        where free-spirited
-                        souls can dance, unwind, and vibe in harmony with nature. We believe in pure energy, freedom,
-                        and
-                        the power of sound to
-                        uplift and inspire, turning every beat into a memory and every moment into a rhythm of its own.
-                    </p>
+            <div class="section">
+                <div class="aboutUs">
+                    <div><img src="img/Festival/aboutUsPhoto.png" alt="about-us" class="about-us-img"></div>
+                    <div class="aboutUs-text">
+                        <h1>About InVibe</h1>
+                        <h2>"Sunset, Soundwaves & Pure Vibes."</h2>
+                        <p class="about-us-p">InVibe Festival is more than just a music event—it’s a celebration of
+                            rhythm,
+                            nature, and connection. Set against the
+                            stunning backdrop of a lakeside escape, it blends electronic beats with the soul of summer,
+                            creating
+                            an immersive
+                            experience where music flows as freely as the waves. From Nu Jazz and Indie Soul to House,
+                            Funk,
+                            Nu
+                            Disco, and Light
+                            Techno, InVibe takes you on a journey from sunset grooves to midnight euphoria.
+                            <br>
+                            <br>
+                            Our mission is to bring people together through the universal language of music, creating a
+                            space
+                            where free-spirited
+                            souls can dance, unwind, and vibe in harmony with nature. We believe in pure energy,
+                            freedom,
+                            and
+                            the power of sound to
+                            uplift and inspire, turning every beat into a memory and every moment into a rhythm of its
+                            own.
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="pastEvents">
                 <h1>Past Events</h1>
-                <div class="pastEvents-gallery">
-                    <div class="event">
-                        <img src="img/Festival/Frame 63.png" alt="pastEvent1">
-                        <h3>2024 Montreal</h3>
+                <div class="section">
+                    <div class="pastEvents-gallery">
+                        <div class="event">
+                            <img src="img/Festival/Frame 63.png" alt="pastEvent1">
+                            <h3>2024 Montreal</h3>
+                        </div>
                     </div>
-                    <div class="event">
-                        <h3>2023 Taipei</h3>
-                        <img src="img/Festival/Frame 64.png" alt="pastEvent2">
+                    <div class="section">
+                        <div class="event">
+                            <h3>2023 Taipei</h3>
+                            <img src="img/Festival/Frame 64.png" alt="pastEvent2">
+                        </div>
                     </div>
-                    <div class="event">
-                        <img src="img/Festival/Frame 65.png" alt="pastEvent3">
-                        <h3>2022 Okinawa</h3>
+                    <div class="section">
+                        <div class="event">
+                            <img src="img/Festival/Frame 65.png" alt="pastEvent3">
+                            <h3>2022 Okinawa</h3>
+                        </div>
                     </div>
-                    <div class="event">
-                        <h3>2021 Berlin</h3>
-                        <img src="img/Festival/Frame 66.png" alt="pastEvent4">
+                    <div class="section">
+                        <div class="event">
+                            <h3>2021 Berlin</h3>
+                            <img src="img/Festival/Frame 66.png" alt="pastEvent4">
+                        </div>
                     </div>
-                    <div class="event">
-                        <img src="img/Festival/Frame 67.png" alt="pastEvent5">
-                        <h3>2019 Lisboa</h3>
+                    <div class="section">
+                        <div class="event">
+                            <img src="img/Festival/Frame 67.png" alt="pastEvent5">
+                            <h3>2019 Lisboa</h3>
+                        </div>
                     </div>
-                    <div class="event">
-                        <h3>2018 Barcelona</h3>
-                        <img src="img/Festival/Frame 68.png" alt="pastEvent6">
+                    <div class="section">
+                        <div class="event">
+                            <h3>2018 Barcelona</h3>
+                            <img src="img/Festival/Frame 68.png" alt="pastEvent6">
+                        </div>
                     </div>
                 </div>
             </div>
+    </div>
 
-        </main>
-        <footer>
+    </main>
+    <footer>
+        <div class="section">
             <div class="sponsors">
                 <ul class="sponsors-logo">
                     <li><a href=""><img src="img/sponsor_logo/sponsor01.svg" alt=""></img></a></li>
@@ -173,6 +198,8 @@
                     <li><a href=""><img src="img/sponsor_logo/sponsor10.svg" alt=""></img></a></li>
                 </ul>
             </div>
+        </div>
+        <div class="footer-bottom">
             <div class="footer-bar">
                 <div class="footer-icons">
                     <a href=""><i class="fa-brands fa-facebook"></i></a>
@@ -197,11 +224,10 @@
                         <li><a href="">General conditions</a></li>
                     </ul>
                 </div>
-
             </div>
             <div class="footer-logo">
                 <img src="img/Good Vibe(1200 x 100 px) half.svg" alt="Good_Vibe">
             </div>
-        </footer>
-    </div>
-    </bod
+        </div>
+    </footer>
+</body>
