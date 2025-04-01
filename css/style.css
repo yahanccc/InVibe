@@ -817,6 +817,10 @@ td {
     animation: fadeIn 0.5s ease-in-out;
 }
 
+.ticket:hover {
+    transform: translate(0, -10px);
+}
+
 .ticket h3,
 #ticket-price {
     font-size: 20px;
