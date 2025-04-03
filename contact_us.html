@@ -28,9 +28,13 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
                     </ul>
-                    <div class="nav-search">
-                        <input type="text"><i class="fa-solid fa-magnifying-glass"></i>
+                    <div class="nav-user-cart">
+                        <a href="log_in.html"><i id="user" class="fa-regular fa-circle-user"></i></a>
+                        <a href="check_out.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
                     </div>
+                    <!-- <div class="nav-search">
+                        <input type="text"><i class="fa-solid fa-magnifying-glass"></i>
+                    </div> -->
                 </div>
             </nav>
         </header>
@@ -43,12 +47,12 @@
             <div class="contact-us-bar">
                 <div class="contact-us-form">
                     <fieldset>
-                        <legend>Your first name</legend><input type="text">
+                        <legend>Your first name</legend><input type="text" placeholder="Enter your first name" required>
                         <br>
-                        <legend>Your last name</legend><input type="text">
-                        <legend>Your email</legend><input type="email">
+                        <legend>Your last name</legend><input type="text" placeholder="Enter your last name" required>
+                        <legend>Your email</legend><input type="email" placeholder="Enter your email" required>
                         <br>
-                        <legend>Your message</legend><textarea></textarea>
+                        <legend>Your message</legend><textarea placeholder="Enter your message" required></textarea>
                         <br><button>Submit</button>
                     </fieldset>
                 </div>

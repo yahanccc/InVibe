@@ -60,7 +60,7 @@ nav {
 }
 
 .nav-bar {
-    width: 832px;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,9 +71,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-
-
 }
 
 .nav-pages a {
@@ -105,11 +102,21 @@ nav {
     left: 0;
 }
 
-/* .nav-pages a:hover {
-    border-bottom: 1px solid #000000;
-} */
+.nav-pages a.active {
+    color: #0077B6;
+}
 
-.nav-search {
+.nav-user-cart {}
+
+.nav-user-cart a {
+    color: #757575;
+    font-size: 20px;
+    height: 24px;
+    margin: 8px;
+
+}
+
+/* .nav-search {
     position: relative;
     display: inline-block;
 }
@@ -133,7 +140,7 @@ nav {
     top: 6px;
     font-size: 16px;
     color: #757575;
-}
+} */
 
 /* --------------------------- header/banner --------------------------- */
 
@@ -503,7 +510,7 @@ footer {
 }
 
 .news h2 {
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -519,7 +526,7 @@ footer {
     aspect-ratio: 1/0.6;
     border: 1.5px solid #757575;
     border-radius: 8px;
-    padding: 24px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -530,6 +537,18 @@ footer {
 .news-card3:hover {
     background-color: #FFC857;
 }
+
+.news-up {
+    display: flex;
+}
+
+.news-up img {
+    width: 80px;
+    border-radius: 50%;
+    margin-right: 16px;
+    border: 2px solid #757575;
+}
+
 
 .news-down {
     display: flex;
@@ -572,16 +591,15 @@ table {
     font-weight: 300;
     text-align: center;
     border: 3px solid #000000;
-
-    transition: background-color 2s .1s ease;
-}
-
-table:hover {
-    background-color: #FFC857;
 }
 
 tr {
     border: 3px solid #000000;
+    transition: background-color 1.5s .05s ease;
+}
+
+tr:hover {
+    background-color: #FFC857;
 }
 
 td {
@@ -710,6 +728,8 @@ td {
     height: 100%;
     position: absolute;
     backface-visibility: hidden;
+
+    cursor: pointer;
 }
 
 .artist-front {
@@ -720,6 +740,10 @@ td {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.artist-front:hover {
+    opacity: 0.7;
 }
 
 .artist-back {

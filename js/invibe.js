@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-//--------------------------- GSAP ---------------------------
+//--------------------------- GSAP for Index ---------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
     gsap.utils.toArray(".section").forEach(section => {
@@ -96,4 +96,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 })
 
+//--------------------------- for navigation ---------------------------
 
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".nav-pages a").forEach(item => {
+        if (item.href === window.location.href) {
+            item.classList.add("active");
+        }
+    });
+});
