@@ -109,11 +109,14 @@ nav {
 .nav-user-cart {}
 
 .nav-user-cart a {
-    color: #757575;
+    color: #000000;
     font-size: 20px;
     height: 24px;
     margin: 8px;
+}
 
+.nav-user-cart a:hover{
+    color: #0077B6;
 }
 
 /* .nav-search {

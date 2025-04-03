@@ -100,8 +100,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".nav-pages a").forEach(item => {
+
         if (item.href === window.location.href) {
             item.classList.add("active");
         }
+
+        const currentURL = window.location.href;
+        const itemURL = item.href;
+        // 主要的 shop 頁面或開頭是 shop-
+        if (itemURL === currentURL || currentURL.includes("shop-")) {
+            if (itemURL.includes("shop")) { // 確保只影響 shop 導覽
+                item.classList.add("active");
+            }
+        }
     });
 });
+
+
+//---------------------------  ---------------------------
