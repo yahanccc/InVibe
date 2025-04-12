@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery</title>
+
+    <style>
+        body {
+            background-color: #eee;
+        }
+
+        .transition {
+            transition: 1.5s;
+        }
+
+        .wrapper {
+            width: 800px;
+            margin: 20px;
+            /* border: 1px solid #000000; */
+        }
+
+        .menu {
+            display: inline-block;
+            position: relative;
+            padding: 0 0 0 3px;
+        }
+
+        .menu.active {
+            background-color: #fff;
+        }
+
+        .menu ul {
+            position: relative;
+            left: 0;
+            top: 0;
+
+            background-color: olivedrab;
+            width: 110px;
+
+            opacity: 0;
+        }
+
+        .menu.active ul {
+            opacity: 1;
+        }
+
+        ul li {
+            list-style: none;
+        }
+
+        .menu>ul>li>a {
+            display: block;
+        }
+
+        .bar {
+            width: 24px;
+            height: 3px;
+            background-color: #666;
+            margin: 6px 0px;
+
+            border-radius: 24px;
+        }
+
+        .menu.active .bar1 {
+
+            transform: rotate(-45deg) translate(-9px, 4px);
+
+        }
+
+        .menu.active .bar2 {
+            opacity: 0;
+        }
+
+        .menu.active .bar3 {
+
+            transform: rotate(45deg) translate(-9px, -4px);
+        }
+    </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(function () {
+
+            $('.menu').click(function () {
+                // $(this).addClass('active')
+                $(this).toggleClass('active')
+            })
+
+        })
+    </script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu transition">
+            <div class="bar bar1 transition"></div>
+            <div class="bar bar2 transition"></div>
+            <div class="bar bar3 transition"></div>
+
+            <ul class="transition">
+                <li><a href="transition">Home</a></li>
+                <li><a href="transition">About</a></li>
+                <li><a href="transition">Products</a></li>
+                <li><a href="transition">Gallery</a></li>
+                <li><a href="transition">Do Nothing</a></li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>

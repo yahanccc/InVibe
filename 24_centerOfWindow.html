@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>jQuery</title>
+    <style>
+        #inCenter{
+            width: 200px;
+            height: 200px;
+            background-color: #ccc;
+
+            position: absolute;
+        }
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    <script>
+        $(function(){
+			let divWidth = $('#inCenter').width()		
+			let divHeight = $('#inCenter').height()
+
+            // function moveCenter(){ }    // 傳統函數
+            // const moveCenter = () => {} // IIFE + 箭頭函數
+
+            const moveCenter = () => {
+                let winWidth = $(window).width()		
+                let winHeight = $(window).height()
+                    
+                $('#inCenter').css({
+                    left: (winWidth - divWidth) / 2,
+                    top: (winHeight - divHeight) / 2,
+                })
+            }
+
+            moveCenter()
+            $(window).resize(function(){
+                moveCenter()
+            })
+
+            // function moveCenter(){ 
+            //     let winWidth = $(window).width()		
+            //     let winHeight = $(window).height()
+                    
+            //     $('#inCenter').css({
+            //         left: (winWidth - divWidth) / 2,
+            //         top: (winHeight - divHeight) / 2,
+            //     })
+            // }
+		})
+    </script>
+</head>
+<body>
+	<div id="inCenter"></div>
+</body>
+
+</html>

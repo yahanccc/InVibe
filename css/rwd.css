@@ -1,0 +1,255 @@
+
+
+
+/* --------------------------- the_festival_main/lineup --------------------------- */
+
+@media (max-width: 390px) {
+
+    .lineUp {
+        padding: 100px 16px 60px;
+        box-sizing: border-box;
+    }
+
+    .lineUp-bar {
+        width: 90vw;
+        margin-bottom: 20px;
+
+    }
+
+    .lineUp-h1 {
+        margin: 0;
+    }
+
+    .lineUp-bar a {
+        font-size: 14px;
+    }
+
+    .lineUp-names {
+        flex-direction: column;
+    }
+
+    .lineUp-names a {
+        border: none;
+        margin-left: 0;
+        padding: 0;
+    }
+
+    .lineUp-bar a:hover {
+        color: #0077B6;
+        text-decoration: underline;
+        border: none;
+    }
+
+}
+
+/* --------------------------- the_festival_main/countdown --------------------------- */
+
+@media (max-width: 390px) {
+
+    .countdown {
+        width: 100vw;
+        flex-direction: column;
+        padding: 20px 0 60px;
+    }
+
+    .countdown h1 {
+        font-size: 24px;
+        font-weight: bold;
+        padding-bottom: 20px;
+    }
+
+    #timer {
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 16px;
+
+        padding-bottom: 20px;
+    }
+
+    .timer-unit {
+        text-align: center;
+    }
+
+    .timer-label {
+        display: block;
+    }
+
+    #days,
+    #hours,
+    #minutes,
+    #seconds {
+        font-size: 24px;
+    }
+
+    .countdown a {
+        width: 180px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
+    }
+
+}
+
+/* --------------------------- the_festival_main/aboutUs --------------------------- */
+
+@media (max-width: 390px) {
+    .aboutUs {
+        width: 100vw;
+        flex-direction: column;
+        margin: 80px 0 24px;
+    }
+
+    .aboutUs-text {
+        width: 90%;
+        padding: 28px;
+    }
+
+    .aboutUs-text h1 {
+        font-size: 24px;
+    }
+
+    .aboutUs-text h2 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    .aboutUs-text p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+}
+
+/* --------------------------- the_festival_main/pastEvents --------------------------- */
+
+@media (max-width: 390px) {
+    .pastEvents {
+        width: 100vw;
+        margin-top: 16px;
+    }
+
+    .pastEvents h1 {
+        font-size: 24px;
+        text-align: center;
+        margin-bottom: 32px;
+    }
+
+    .event {
+        flex-direction: column;
+    }
+
+    .event h3 {
+        display: none;
+    }
+
+    .event img {
+        width: 100%;
+        border-radius: 0;
+        -webkit-filter: none;
+    }
+}
+
+/* --------------------------- Program_main/news --------------------------- */
+
+@media (max-width: 390px) {
+
+    .news {
+        padding: 40px 16px;
+    }
+
+    .news h1 {
+        font-size: 24px;
+    }
+
+    .news-cards {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .news h2 {
+        display: none;
+    }
+
+    .news p {
+        text-align: left;
+        padding: 16px;
+    }
+
+    .news-card1,
+    .news-card2,
+    .news-card3 {
+        /* width: 312px; */
+        /* height: 136px; */
+        width: 80vw;
+        height: 35vw;
+        flex-direction: row;
+    }
+
+    .news-up {
+        padding: 0;
+    }
+
+    .news-up img {
+        display: block;
+        margin: 0 auto;
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* --------------------------- Program_main/program --------------------------- */
+
+@media (max-width: 390px) {
+
+    .program {
+        margin-bottom: 60px;
+        animation: fadeIn 0.5s ease-in-out;
+    }
+
+
+    .program h1 {
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+        padding: 60px 0 30px;
+    }
+
+    table {
+        margin: 0 auto;
+        font-size: 20px;
+        font-weight: 300;
+        text-align: center;
+        border: 3px solid #000000;
+    }
+
+    tr {
+        border: 3px solid #000000;
+        transition: background-color 1.5s .05s ease;
+    }
+
+    tr:hover {
+        background-color: #FFC857;
+    }
+
+    td {
+        line-height: 54px;
+        padding: 0 54px;
+    }
+
+    #table-title {
+        font-weight: 500;
+    }
+
+    #table-time,
+    #table-day1,
+    #table-day2 {
+        width: 280px;
+        border: 3px solid #000000;
+        padding: 16px;
+        background-color: #FFA67E;
+    }
+
+
+}
