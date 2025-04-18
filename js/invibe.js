@@ -158,15 +158,32 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
     const slider = document.getElementById('shop-slider');
-    document.querySelector('.slide-left').onclick = () => slider.scrollBy({ left: -300, behavior: 'smooth' });
+    document.querySelector('.slide-left').onclick = () => slider.scrollTo({ left: 0, behavior: 'smooth' });
     document.querySelector('.slide-right').onclick = () => slider.scrollBy({ left: 300, behavior: 'smooth' });
+
+
+    const leftBtn = document.querySelector('.slide-left');
+    const rightBtn = document.querySelector('.slide-right');
+
+    slider.addEventListener('scroll', () => {
+        leftBtn.disabled = slider.scrollLeft === 0;
+        rightBtn.disabled = slider.scrollLeft + slider.clientWidth >= slider.scrollWidth;
+    });
+
 })
-
-
 //--------------------------- recomm-slider ---------------------------
 
 document.addEventListener("DOMContentLoaded", function () {
     const sliderPlus = document.getElementById('plus-slider');
-    document.querySelector('.slidePlus-left').onclick = () => sliderPlus.scrollBy({ left: -180, behavior: 'smooth' });
-    document.querySelector('.slidePlus-right').onclick = () => sliderPlus.scrollBy({ left: 180, behavior: 'smooth' });
+    document.querySelector('.slidePlus-left').onclick = () => sliderPlus.scrollTo({ left: 0, behavior: 'smooth' });
+    document.querySelector('.slidePlus-right').onclick = () => sliderPlus.scrollBy({ left: 200, behavior: 'smooth' });
+
+    const leftBtnPlus = document.querySelector('.slidePlus-left');
+    const rightBtnPlus = document.querySelector('.slidePlus-right');
+
+    slider.addEventListener('scroll', () => {
+        leftBtnPlus.disabled = sliderPlus.scrollLeft === 0;
+        rightBtnPlus.disabled = sliderPlus.scrollLeft + sliderPlus.clientWidth >= sliderPlus.scrollWidth;
+    });
+
 })

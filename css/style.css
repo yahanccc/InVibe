@@ -277,7 +277,7 @@ nav {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
     .lineUp {
         margin-top: 140px;
         padding: 60px 12px;
@@ -290,8 +290,6 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    /* border: 1px solid #000000; */
 }
 
 .lineUp-h1 {
@@ -313,7 +311,7 @@ nav {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 430px) {
     .lineUp-h1 {
         font-size: 24px;
     }
@@ -328,15 +326,21 @@ nav {
     text-decoration: none;
 }
 
-@media (max-width: 390px) {
-    .lineUp-bar a {
-        font-size: 14px;
-    }
-}
-
 .lineUp-bar a:hover {
     color: #0077B6;
     border-bottom: 1.5px solid #0077B6;
+}
+
+@media (max-width: 430px) {
+    .lineUp-bar a {
+        font-size: 14px;
+    }
+
+    .lineUp-bar a:hover {
+        border: none;
+        text-decoration: underline;
+    }
+
 }
 
 .lineUp-names {
@@ -344,8 +348,6 @@ nav {
     font-weight: 300;
     display: flex;
     flex-wrap: wrap;
-
-    /* border: 1px solid #000000; */
 }
 
 @media (max-width: 900px) {
@@ -2013,6 +2015,8 @@ td {
 .shop-wrapper {
     display: flex;
     align-items: center;
+
+    /* max-width: 100%; */
 }
 
 .slide-left,
@@ -2053,12 +2057,11 @@ td {
 
     .shop-products::-webkit-scrollbar {
         display: none;
-        /* 隱藏捲軸（可選） */
     }
 
     .shop-items {
         flex: 0 0 auto;
-        width: 200px;
+        width: 60vw;
         height: auto;
         border-radius: 8px;
         scroll-snap-align: start;
@@ -2323,6 +2326,12 @@ p {
     margin: 8px;
 }
 
+.slidePlus-left:hover,
+.slidePlus-right:hover {
+    opacity: 0.5;
+}
+
+
 /* .plus-items button {
     width: 80%;
     border-radius: 9999px;
@@ -2375,6 +2384,7 @@ p {
     .plus-wrapper {
         display: flex;
         align-items: center;
+        max-width: 100%;
     }
 
     .plus-products {
