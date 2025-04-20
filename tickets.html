@@ -29,10 +29,6 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
                     </ul>
-                    <div class="nav-user-cart">
-                        <a href="log_in.html"><i id="user" class="fa-regular fa-circle-user"></i></a>
-                        <a href="check_out.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
                 </div>
                 <div class="hamburger">
                     <div class="menu">
@@ -52,43 +48,85 @@
                         <li><a href="check_out.html">Cart</a></li>
                     </ul>
                 </div>
+                <div class="icon-user">
+                    <a href="log_in.html"><i class="fa-regular fa-circle-user"></i></a>
+                </div>
+                <div class="icon-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
             </nav>
         </header>
         <main>
             <div class="tickets-header">
                 <h1>Choose Your Pass</h1>
             </div>
-            <div class="ticket-cards">
-                <div class="ticket" id="day1">
-                    <h3>Single-Day Pass</h3>
+            <div class="listProduct ticket-cards">
+                <div class="ticket product-item" id="day1">
+                    <h3 class="product-name">Single-Day Pass</h3>
                     <div id="day1-square">
                         <p>August 1 <br>
                             Friday</p>
                     </div>
-                    <p id="ticket-price">120€</p>
-                    <button class="ticket-btn" id="day1-btn">Buy Now</button>
+                    <p class="ticket-price price ">120€</p>
+                    <button class="add-to-cart ticket-btn" id="day1-btn" data-id="1"
+                        data-name="Single-Day Pass - August 1, Friday" data-price="120" data-image="img/PageIcon.svg">
+                        Add to Cart
+                    </button>
                 </div>
-                <div class="ticket" id="day2">
-                    <h3>Single-Day Pass</h3>
+                <div class="ticket product-item" id="day2">
+                    <h3 class="product-name">Single-Day Pass</h3>
                     <div id="day2-square">
                         <p>August 2<br>
                             Saturday</p>
                     </div>
-                    <p id="ticket-price">120€</p>
-                    <button class="ticket-btn" id="day2-btn">Buy Now</button>
+                    <p class="ticket-price price">120€</p>
+                    <button class="add-to-cart ticket-btn" id="day2-btn" data-id="2"
+                        data-name="Single-Day Pass - August 2, Saturday" data-price="120" data-image="img/PageIcon.svg">
+                        Add to Cart</button>
                 </div>
-                <div class="ticket" id="day3">
-                    <h3>Two-Day Pass</h3>
+                <div class="ticket product-item" id="day3">
+                    <h3 class="product-name">Two-Day Pass</h3>
                     <div id="day3-square">
                         <p>Full Experience<br>
                             <span>(August 1 & 2)</span>
                         </p>
                     </div>
-                    <p id="ticket-price">200€</p>
-                    <button class="ticket-btn" id="day3-btn">Buy Now</button>
+                    <p class="ticket-price price">200€</p>
+                    <button class="add-to-cart ticket-btn" id="day3-btn" data-id="3"
+                        data-name="Two-Day Pass - August 1 & 2" data-price="200" data-image="img/PageIcon.svg">
+                        Add to Cart</button>
                 </div>
             </div>
-            <!-- <img class="page-icon"  src="img/PageIcon.svg" alt=""> -->
+
+            <div class="cartTab">
+                <h2>Your Cart</h2>
+                <div class="listCart">
+                    <div class="item">
+                        <!-- <div class="image">
+                            <img src="img/PageIcon.svg" alt="">
+                        </div>
+                        <div class="name">
+                            <p>Single-Day Pass - August 1, Friday</p>
+                        </div>
+                        <div class="totalPrice">
+                            <p>120€</p>
+                        </div>
+                        <div class="quantity">
+                            <span class="minus">－</span>
+                            <span>1</span>
+                            <span class="plus">＋</span>
+                        </div> -->
+                    </div>
+
+                </div>
+                <div class="cart-btn">
+                    <button class="close">Close</button>
+                    <button class="checkOut">Check Out</button>
+                </div>
+            </div>
+
+
 
             <div class="logo-carousel">
                 <div class="floating-logo">
@@ -139,13 +177,17 @@
             <div class="ticket-infos">
                 <div class="ticket-text">
                     <h1>Tickets & Refund Policy</h1>
-                    <p> All tickets grant access to the festival grounds, live performances, food & drink vendors, and
+                    <p> All tickets grant access to the festival grounds, live performances, food & drink vendors,
+                        and
                         other on-site activities.</p>
                     <h3><i class="fa-solid fa-ticket"></i> Important Ticket Information</h3>
-                    <p>All ticket sales are <span>final</span>—please ensure you select the correct ticket type before
+                    <p>All ticket sales are <span>final</span>—please ensure you select the correct ticket type
+                        before
                         purchasing.</p>
-                    <p>Tickets are digital and must be presented via mobile device or printed copy at the entrance.</p>
-                    <p>Your ticket is personal and <span>non-transferable</span>. ID verification may be required upon
+                    <p>Tickets are digital and must be presented via mobile device or printed copy at the entrance.
+                    </p>
+                    <p>Your ticket is personal and <span>non-transferable</span>. ID verification may be required
+                        upon
                         entry.</p>
                     <p>The festival is a <span>cashless</span> event, so be prepared to pay with card or contactless
                         payment methods.</p>

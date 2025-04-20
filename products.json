@@ -1,0 +1,50 @@
+[
+    {
+        "id": "4",
+        "name": "Coastal Breeze Straw Hat",
+        "price": 30,
+        "image": "img/Online Shop/straw_hat-1.png"
+    },
+    {
+        "id": "5",
+        "name": "Everyday Vibe Grocery Bag",
+        "price": 25,
+        "image": "img/Online Shop/grocery_bag-1.png"
+    },
+    {
+        "id": "6",
+        "name": "Midnight Wave Bottle",
+        "price": 35,
+        "image": "img/Online Shop/black_bottle-1.png"
+    },
+    {
+        "id": "7",
+        "name": "Pure Vibe Tee",
+        "price": 30,
+        "image": "img/Online Shop/bois_shirt-1.png"
+    },
+    {
+        "id": "8",
+        "name": "Pure Vibe Tote",
+        "price": 30,
+        "image": "img/Online Shop/vert_bag-1.png"
+    },
+    {
+        "id": "9",
+        "name": "Simple Vibe Tee",
+        "price": 30,
+        "image": "img/Online Shop/grey_shirt-1.png"
+    },
+    {
+        "id": "10",
+        "name": "Sunshine Bucket Hat",
+        "price": 25,
+        "image": "img/Online Shop/yellow_hat-1.png"
+    },
+    {
+        "id": "11",
+        "name": "Urban Vibe Fisherman Hat",
+        "price": 25,
+        "image": "img/Online Shop/gray_hat-1.png"
+    }
+]

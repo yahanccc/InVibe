@@ -20,15 +20,6 @@ $(function () {
 
 //--------------------------- hamburger ---------------------------
 
-
-// $(function () {
-
-//     $('.menu').click(function () {
-//         $(this).toggleClass('active')
-//     })
-
-// })
-
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelector('.menu').addEventListener('click', function () {
         this.classList.toggle('active');
@@ -39,25 +30,21 @@ document.addEventListener("DOMContentLoaded", function () {
 // --------------------------- the_festival / countdown---------------------------
 
 function updateCountdown() {
-    // 在這裡設定目標日期
     const targetDate = new Date("2025-07-31T23:59:59").getTime();
     const now = new Date().getTime();
     const timeLeft = targetDate - now;
 
-    // 計算天、小時、分鐘、秒數
     const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
     const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
     const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-    // 更新 HTML 元素
     document.getElementById('days').textContent = days.toString().padStart(2, '0');
     document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
     document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
     document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
 }
 
-// 每秒更新倒數計時器
 document.addEventListener("DOMContentLoaded", function () {
     updateCountdown();
     setInterval(updateCountdown, 1000);
@@ -72,7 +59,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const content = header.nextElementSibling;
             const icon = header.querySelector('.accordion-icon');
 
-            // 關閉其他已開啟的手風琴
             document.querySelectorAll('.accordion-content').forEach(otherContent => {
                 if (otherContent !== content) {
                     otherContent.classList.remove('active');
@@ -80,7 +66,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
 
-            // 切換當前手風琴的狀態
             content.classList.toggle('active');
             icon.classList.toggle('active');
         });
@@ -89,22 +74,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //--------------------------- artist_main/artist-cards ---------------------------
 
-// cannot function
-// document.querySelector('.card-container').addEventListener('click', function () {
-//     this.querySelector('.card').classList.toggle('flip');
-// });
-
-// only the first one
-// document.addEventListener("DOMContentLoaded", function () {
-//     const cardContainer = document.querySelector('.card-container');
-//     if (cardContainer) {
-//         cardContainer.addEventListener('click', function () {
-//             this.querySelector('.card').classList.toggle('flip');
-//         });
-//     } else {
-//         console.error("找不到 .card-container");
-//     }
-// });
 
 document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.artists').forEach(container => {
@@ -145,9 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const currentURL = window.location.href;
         const itemURL = item.href;
-        // 主要的 shop 頁面或開頭是 shop-
+
         if (itemURL === currentURL || currentURL.includes("shop-")) {
-            if (itemURL.includes("shop")) { // 確保只影響 shop 導覽
+            if (itemURL.includes("shop")) {
                 item.classList.add("active");
             }
         }
@@ -185,5 +154,199 @@ document.addEventListener("DOMContentLoaded", function () {
         leftBtnPlus.disabled = sliderPlus.scrollLeft === 0;
         rightBtnPlus.disabled = sliderPlus.scrollLeft + sliderPlus.clientWidth >= sliderPlus.scrollWidth;
     });
+
+})
+
+//--------------------------- cart ---------------------------
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    let iconCart = document.querySelector('.icon-cart');  // 1
+    let body = document.querySelector('body');            // 2
+
+    let closeCart = document.querySelector('.close');     // 4
+
+    let listProductHTML = document.querySelector('.listProduct');  // 6 找到網頁上的票券們
+    
+    let listCartHTML = document.querySelector('.listCart');
+    let iconCartSpan = document.querySelector('.icon-cart span');
+
+    let listProducts = [];
+    let carts = [];
+
+    iconCart.addEventListener('click', () => {            // 3
+        body.classList.toggle('showCart');
+    })
+
+    closeCart.addEventListener('click', () => {           // 5
+        body.classList.remove('showCart');
+    })
+
+    // ----------- ADD PRODUCT TO CART --------------
+
+    const addDataToHTML = () => {                                   // 8
+        listProductHTML.innerHTML = '';
+        if (listProducts.length > 0) {
+            listProducts.forEach(product => {
+                let newProduct = document.createElement('div');
+                newProduct.classList.add('ticket');
+                newProduct.dataset.id = product.id;
+                newProduct.innerHTML = `
+                <h3 class="product-name">${product.name}</h3>
+                <p class="ticket-price price ">${product.price}€</p>
+                <button class="add-to-cart ticket-btn" id="day1-btn" data-id="1"
+                        data-name="Single-Day Pass - August 1, Friday" data-price="120" data-image="img/PageIcon.svg">
+                        Add to Cart
+                </button>
+                `;
+                listProductHTML.appendChild(newProduct);
+            })
+        }
+    }
+
+    listProductHTML.addEventListener('click', (event) => {             // 9
+        let positionClick = event.target;
+        if (positionClick.classList.contains('add-to-cart')) {
+            let productID = positionClick.parentElement.dataset.id;
+
+            // let productID = positionClick.dataset.id;
+            // let productName = positionClick.dataset.name;
+            // let productPrice = positionClick.dataset.price;
+            // let productImage = positionClick.dataset.image;
+            // let product = {
+            //     id: productID,
+            //     name: productName,
+            //     price: productPrice,
+            //     image: productImage
+            // }
+            // listProducts.push(product);
+            // addDataToHTML();
+
+            addToCart(productID)
+        }
+
+    })
+
+
+    const addToCart = (productID) => {
+        let positionThisProductInCart = carts.findIndex((value) => value.productID === productID);
+        if (carts.length <= 0) {
+            carts = [{
+                productID: productID,
+                quantity: 1
+            }]
+        } else if (positionThisProductInCart < 0) {
+            carts.push({
+                productID: productID,
+                quantity: 1
+            });
+        } else {
+            carts[positionThisProductInCart].quantity++;
+
+        }
+        addCartToHTML();
+        addCartToMemory();
+    }
+
+    const addCartToMemory = () => {
+        localStorage.setItem('carts', JSON.stringify(carts));
+    }
+
+    const addCartToHTML = () => {
+        listCartHTML.innerHTML = '';
+
+        let totalQuantity = 0;
+
+        if (carts.length > 0) {
+            carts.forEach(cart => {
+                totalQuantity += cart.quantity
+
+                let newCart = document.createElement('div');
+                newCart.classList.add('item');
+
+                newCart.dataset.id = cart.productID
+
+                let positionProduct = listProducts.findIndex((value) => value.id === cart.productID);
+                let info = listProducts[positionProduct];
+
+                newCart.innerHTML = `
+                 <div class="image">
+                    <img src="${info.image}" alt="">
+                </div>
+                <div class="name">
+                    <p>${info.name}</p>
+                </div>
+                <div class="totalPrice">
+                    <p>${cart.quantity * info.price}€</p>
+                </div>
+                <div class="quantity">
+                    <span class="minus">－</span>
+                    <span>${cart.quantity}</span>
+                    <span class="plus">＋</span>
+                </div>
+                `;
+                listCartHTML.appendChild(newCart);
+            })
+        }
+        iconCartSpan.innerText = totalQuantity
+
+    }
+
+    listCartHTML.addEventListener('click', (event) => {
+        let positionClick = event.target;
+        if (positionClick.classList.contains('minus') || (positionClick.classList.contains('plus'))) {
+            let productID = positionClick.parentElement.parentElement.dataset.id;
+            let type = 'minus';
+            if (positionClick.classList.contains('plus')) {
+                type = 'plus';
+            }
+            changeQuantity(productID, type);
+        }
+    })
+
+    const changeQuantity = (productID, type) => {
+        let positionItemInCart = carts.findIndex((value) => value.productID === productID);
+        if (positionItemInCart >= 0) {
+            switch (type) {
+                case 'plus':
+                    carts[positionItemInCart].quantity++;
+                    break;
+
+                default:
+                    let valueChange = carts[positionItemInCart].quantity - 1;
+                    if (valueChange > 0) {
+                        carts[positionItemInCart].quantity = valueChange
+                    } else {
+                        carts.splice(positionItemInCart, 1);
+                    }
+                    break;
+            }
+        }
+        addCartToHTML();
+        addCartToMemory();
+
+    }
+
+
+    const initApp = () => {                               // 7
+        // get data from json
+        fetch('tickets.json')
+            .then(response => response.json())
+            .then(data => {
+                listProducts = data;
+                addDataToHTML();
+                // renderProducts(data);
+
+                // get cart from memory
+                if (localStorage.getItem('carts')) {
+                    carts = JSON.parse(localStorage.getItem('carts'));
+                    addCartToHTML();
+                }
+
+            })
+    }
+
+    initApp();
+
 
 })

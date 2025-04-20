@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "name": "Single-Day Pass  August 1 Friday",
+        "price": 120,
+        "image": "img/PageIcon.svg"
+    },
+    {
+        "id": "2",
+        "name": "Single-Day Pass  August 2 Saturday",
+        "price": 120,
+        "image": "img/PageIcon.svg"
+    },
+    {
+        "id": "3",
+        "name": "Two-Day Pass  August 1 & 2",
+        "price": 200,
+        "image": "img/PageIcon.svg"
+    }
+]

@@ -29,10 +29,6 @@
                         <li><a href="faq.html">FAQ</a></li>
                         <li><a href="contact_us.html">Contact Us</a></li>
                     </ul>
-                    <div class="nav-user-cart">
-                        <a href="log_in.html"><i id="user" class="fa-regular fa-circle-user"></i></a>
-                        <a href="check_out.html"><i id="cart" class="fa-solid fa-cart-shopping"></i></a>
-                    </div>
                 </div>
                 <div class="hamburger">
                     <div class="menu">
@@ -52,95 +48,23 @@
                         <li><a href="check_out.html">Cart</a></li>
                     </ul>
                 </div>
+                <div class="icon-user">
+                    <a href="log_in.html"><i class="fa-regular fa-circle-user"></i></a>
+                </div>
+                <div class="icon-cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count">0</span>
+                </div>
             </nav>
         </header>
         <main>
             <div class="content">
-                <div class="checkout-list">
-                    <div class="checkout-items">
-                        <div class="items-left">
-                            <img src="img/PageIcon.svg" alt="">
-                            <p>Two-Day Pass - Full Experience (August 1 & 2)</p>
-                        </div>
-                        <div class="items-right">
-                            <select>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <p>200€</p>
-                        </div>
+                <div class="checkout-list cart-container">
+                    <!-- <div class="checkout-items" id="cart-items">
                     </div>
-                    <div class="checkout-items">
-                        <div class="items-left">
-                            <img src="img/Online Shop/yellow_hat-1.png" alt="">
-                            <p>Sunshine Bucket Hat</p>
-                        </div>
-                        <div class="items-right">
-                            <select>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <p>25€</p>
-                        </div>
-                    </div>
-                    <div class="checkout-items">
-                        <div class="items-left">
-                            <img src="img/Online Shop/grocery_bag-1.png" alt="">
-                            <p>Everyday Vibe Grocery Bag</p>
-                        </div>
-                        <div class="items-right">
-                            <select>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <p>25€</p>
-                        </div>
-                    </div>
-                    <div class="checkout-items">
-                        <div class="items-left">
-                            <img src="img/Online Shop/black_bottle-1.png" alt="">
-                            <p>Midnight Wave Bottle</p>
-                        </div>
-                        <div class="items-right">
-                            <select>
-                                <option>0</option>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                                <option>4</option>
-                                <option>5</option>
-                            </select>
-                            <p>35€</p>
-                        </div>
-                    </div>
-                    <div class="checkout-calc">
-                        <input type="text" placeholder="Discount Code">
-                        <button>Apply</button>
-                        <div class="subtotal">
-                            <p>Subtotal</p>
-                            <p>285€</p>
-                        </div>
-                        <div class="shipping">
-                            <p>Shipping</p>
-                            <p>15€</p>
-                        </div>
-                        <div class="total">
-                            <p>Total</p>
-                            <p>300€</p>
-                        </div>
-                    </div>
+                    <div class="cart-summary">
+                        <p>Total: <span id="cart-total"></span></p>
+                    </div> -->
                 </div>
 
                 <div class="checkout-payment">
@@ -225,12 +149,36 @@
                             Shop’s Terms of
                             Service and acknowledge
                             the Privacy Policy.</p>
-
-
-
-
                     </div>
                 </div>
+
+                <div class="cartTab">
+                    <h2>Your Cart</h2>
+                    <div class="listCart">
+                        <div class="item">
+                            <!-- <div class="image">
+                            <img src="img/PageIcon.svg" alt="">
+                        </div>
+                        <div class="name">
+                            <p>Single-Day Pass - August 1, Friday</p>
+                        </div>
+                        <div class="totalPrice">
+                            <p>120€</p>
+                        </div>
+                        <div class="quantity">
+                            <span class="minus">－</span>
+                            <span>1</span>
+                            <span class="plus">＋</span>
+                        </div> -->
+                        </div>
+
+                    </div>
+                    <div class="cart-btn">
+                        <button class="close">Close</button>
+                        <button class="checkOut">Check Out</button>
+                    </div>
+                </div>
+
         </main>
         <footer>
             <div class="sponsors">
@@ -245,7 +193,7 @@
                     <a href=""><img src="img/sponsor_logo/sponsor08.svg" alt=""></img></a>
                     <a href=""><img src="img/sponsor_logo/sponsor09.svg" alt=""></img></a>
                     <a href=""><img src="img/sponsor_logo/sponsor10.svg" alt=""></img></a>
-            
+
                     <!-- 重複一次相同的圖片以確保無縫輪播 -->
                     <a href=""><img src="img/sponsor_logo/sponsor01.svg" alt=""></img></a>
                     <a href=""><img src="img/sponsor_logo/sponsor02.svg" alt=""></img></a>
