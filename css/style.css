@@ -1414,7 +1414,6 @@ td {
         text-align: center;
     }
 
-    .transport-map iframe {}
 
 }
 
@@ -1423,7 +1422,6 @@ td {
         font-size: 28px;
     }
 
-    .transport-text p {}
 
     .transport-ways {
         font-size: 16px;
@@ -1798,10 +1796,7 @@ td {
     border: 3px solid #F9EFDC;
 }
 
-.ticket:hover {
-    /* transform: scale(1.05); */
-    /* transform: rotate(3deg); */
-}
+
 
 #day1-btn,
 #day2-btn,
@@ -3747,3 +3742,4 @@ p {
 
         }
     }
+}
