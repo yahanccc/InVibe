@@ -148,13 +148,22 @@ body.showCart .cart-container {
     }
 }
 
-@media (max-width: 390px) {
+@media (max-width: 393px) {
     .sec-h1 {
         font-size: 24px;
     }
 
     .sec-p {
         font-size: 20px;
+    }
+
+    .cartTab {
+        width: 90vw;
+    }
+
+    .cartTab .listCart .item {
+        padding: 0 4px 0 16px;
+        grid-template-columns: 60px 120px 40px 1fr;
     }
 
 }
