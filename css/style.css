@@ -64,7 +64,13 @@ body.showCart .cart-container {
     grid-template-columns: repeat(2, 1fr);
 }
 
-.cart-btn button {
+.cart-btn button,
+.cart-btn button a {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    text-decoration: none;
+    color: #000000;
     font-family: 'Roboto';
     font-size: 16px;
     background-color: #F9EFDC;
@@ -72,12 +78,14 @@ body.showCart .cart-container {
     border-radius: 0 0 0 16px;
 }
 
+
 .cart-btn button:last-child {
     border-radius: 0 0 16px 0;
 }
 
-.cart-btn button:hover {
-    background-color: #55C6A9;
+.cart-btn button:hover,
+.cart-btn button a:hover {
+    color: #0077B6;
     cursor: pointer;
 }
 
@@ -336,7 +344,7 @@ nav {
     text-decoration: none;
     color: #000;
     font-size: 20px;
-    padding: 24px;
+    padding: 36px;
     text-align: center;
     transition: background-color 0.3s, color 0.3s;
 }
