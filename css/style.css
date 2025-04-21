@@ -387,11 +387,18 @@ nav {
 /* --------------------------- the_festival_main/lineup --------------------------- */
 
 .lineUp {
-    padding: 120px 72px;
+    padding: 60px;
     margin: 0 auto;
     box-sizing: border-box;
 
     /* border: 1px solid #000000; */
+}
+
+@media (max-width: 1240px) {
+    .lineUp {
+        margin-top: 80px;
+        padding: 60px 36px;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2237,6 +2244,10 @@ td {
 
 @media screen and (max-width: 820px) {
 
+    .shop-products {
+        margin-bottom: 120px;
+    }
+
     .slide-left,
     .slide-right {
         margin: 0 20px;
@@ -2249,6 +2260,10 @@ td {
 
 @media screen and (max-width: 600px) {
 
+    .shop-products {
+        margin-bottom: 80px;
+    }
+
     .slide-left,
     .slide-right {
         margin: 0 16px;
@@ -2260,6 +2275,11 @@ td {
 }
 
 @media screen and (max-width: 430px) {
+
+    .shop-products {
+        margin-bottom: 60px;
+    }
+
     .shop-items {
         width: 60vw;
     }
