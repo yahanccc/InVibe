@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // --------------------------- the_festival / countdown---------------------------
 
 function updateCountdown() {
-    const targetDate = new Date("2025-07-31T23:59:59").getTime();
+    const targetDate = new Date("2025-12-31T23:59:59").getTime();
     const now = new Date().getTime();
     const timeLeft = targetDate - now;
 
